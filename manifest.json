@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "CodeFlow Pro",
+    "version": "1.0",
+    "description": "A to-do and task management extension for developers.",
+    "permissions": ["storage", "alarms", "notifications"],
+    "host_permissions": ["https://*.firebaseapp.com/", "https://github.com/", "https://www.gstatic.com/firebasejs/*"],
+    "background": {
+      "service_worker": "src/background/background.js"
+    },
+    "action": {
+      "default_popup": "src/popup/popup.html",
+      "default_icon": {
+        "16": "public/icons/icon16.png",
+        "48": "public/icons/icon48.png",
+        "128": "public/icons/icon128.png"
+      }
+    },
+    "options_page": "src/options/options.html",
+    "icons": {
+      "16": "public/icons/icon16.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' https://www.gstatic.com; object-src 'self';"
+    }
+}
+ 
